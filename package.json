@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx next dev",
-    "build": "npx next build",
+    "build": "npx prisma generate && npx next build",
     "start": "npx next start",
     "lint": "npx next lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
