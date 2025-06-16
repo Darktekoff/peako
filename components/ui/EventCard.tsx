@@ -52,7 +52,7 @@ export default function EventCard({ event, variant = 'default', className }: Eve
           <div className="flex-shrink-0 text-center">
             <div className={clsx(
               'px-3 py-2 rounded-lg font-bold text-sm',
-              isUpcoming && 'bg-red-600 text-white',
+              isUpcoming && 'bg-orange-600 text-white',
               isPast && 'bg-gray-700 text-gray-300',
               isCancelled && 'bg-red-900/50 text-red-400'
             )}>

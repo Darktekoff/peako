@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Contact & <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent">Booking</span>
+              Contact & <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">Booking</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Prêt à faire vibrer votre événement ? Contactez-moi pour discuter de votre projet 
@@ -40,7 +40,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Votre nom"
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
                   
@@ -52,7 +52,7 @@ export default function Contact() {
                       type="email"
                       required
                       placeholder="votre@email.com"
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                     type="text"
                     required
                     placeholder="Objet de votre demande"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
                 
@@ -76,7 +76,7 @@ export default function Contact() {
                     </label>
                     <select
                       required
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     >
                       <option value="">Sélectionner un type</option>
                       <option value="private">Événement privé</option>
@@ -93,7 +93,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="date"
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="ex: 1500€ - 3000€"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
                 
@@ -117,13 +117,13 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder="Décrivez votre événement, vos attentes, le lieu, le nombre d'invités..."
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 text-lg font-medium bg-red-600 text-white hover:bg-red-700 rounded-lg transition-colors"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 text-lg font-medium bg-orange-600 text-white hover:bg-orange-700 rounded-lg transition-colors"
                 >
                   <Mail className="mr-2" size={20} />
                   Envoyer ma demande
@@ -145,15 +145,15 @@ export default function Contact() {
                   <h3 className="text-xl font-semibold text-white mb-4">Contact direct</h3>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <Mail className="text-red-400 mr-3" size={20} />
+                      <Mail className="text-orange-400 mr-3" size={20} />
                       <span className="text-gray-300">booking@peako-music.com</span>
                     </div>
                     <div className="flex items-center">
-                      <Phone className="text-red-400 mr-3" size={20} />
+                      <Phone className="text-orange-400 mr-3" size={20} />
                       <span className="text-gray-300">+33 6 XX XX XX XX</span>
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="text-red-400 mr-3" size={20} />
+                      <MapPin className="text-orange-400 mr-3" size={20} />
                       <span className="text-gray-300">France</span>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                 <div className="rounded-lg border border-gray-800 bg-gray-900 p-6">
                   <h3 className="text-xl font-semibold text-white mb-4">Délais de réponse</h3>
                   <div className="flex items-start">
-                    <Clock className="text-red-400 mr-3 mt-0.5" size={20} />
+                    <Clock className="text-orange-400 mr-3 mt-0.5" size={20} />
                     <div>
                       <p className="text-gray-300 mb-2">
                         Je réponds généralement sous <strong className="text-white">24-48h</strong> 
@@ -188,7 +188,7 @@ export default function Contact() {
                 </div>
                 
                 {/* Useful Info */}
-                <div className="rounded-lg border border-red-600/20 bg-red-900/10 p-6">
+                <div className="rounded-lg border border-orange-600/20 bg-orange-900/10 p-6">
                   <h3 className="text-xl font-semibold text-white mb-4">Informations utiles</h3>
                   <div className="space-y-2 text-gray-300 text-sm">
                     <p>• Date et horaires de l'événement</p>

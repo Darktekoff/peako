@@ -127,15 +127,21 @@ model Track {
   spotifyUrl    String?
   appleMusicUrl String?
   soundcloudUrl String?
+  soundcloudId  String?   @unique
   youtubeUrl    String?
   beatportUrl   String?
+  deezerUrl     String?
   playCount     Int       @default(0)
   featured      Boolean   @default(false)
+  visible       Boolean   @default(true)
+  order         Int       @default(0)
+  
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   
   @@index([releaseDate])
   @@index([featured, releaseDate])
+  @@index([visible, order])
   @@map("tracks")
 }
 
@@ -156,13 +162,14 @@ model Gallery {
   @@map("galleries")
 }
 
-// Photos individuelles
+// Photos et vidéos individuelles
 type Photo {
   url           String
   caption       String?
   width         Int?
   height        Int?
   thumbnailUrl  String?
+  type          String?   // "image" ou "video"
 }
 
 // Messages de contact / Demandes de booking
@@ -187,6 +194,28 @@ model ContactMessage {
   @@index([status, createdAt])
   @@index([type, status])
   @@map("contact_messages")
+}
+
+// Médias uploadés
+model Media {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  filename      String
+  originalName  String
+  url           String
+  thumbnailUrl  String?
+  key           String    @unique // Clé R2
+  size          Int
+  mimeType      String
+  category      MediaCategory
+  folder        String?
+  description   String?
+  alt           String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@index([category, createdAt])
+  @@index([folder])
+  @@map("media")
 }
 
 // Enums
@@ -219,10 +248,43 @@ enum ContactType {
   OTHER
 }
 
+enum MediaCategory {
+  IMAGE
+  VIDEO
+  AUDIO
+  DOCUMENT
+}
+
 enum MessageStatus {
   NEW
   READ
   IN_PROGRESS
   ANSWERED
   ARCHIVED
+}
+
+// Contenu modulaire de la page About
+model AboutContent {
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  section       String      // "hero", "biography", "achievements", "gallery", "stats", "influences"
+  type          ContentType // "text", "image", "stats", "list", "achievement", "hero"
+  content       Json        // Contenu flexible (titre, texte, image URL, stats, etc.)
+  order         Int         @default(0)
+  visible       Boolean     @default(true)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  @@index([section, order])
+  @@index([visible, section])
+  @@map("about_content")
+}
+
+enum ContentType {
+  TEXT
+  IMAGE
+  STATS
+  LIST
+  ACHIEVEMENT
+  HERO
+  GALLERY
 }

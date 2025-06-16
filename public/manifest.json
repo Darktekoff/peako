@@ -1,0 +1,21 @@
+{
+  "name": "Peak'O Music",
+  "short_name": "Peak'O",
+  "description": "Site officiel de Peak'O Music - DJ et producteur Hardstyle",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FE9000",
+  "icons": [
+    {
+      "src": "/images/Design sans titre (9).png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Design sans titre (9).png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

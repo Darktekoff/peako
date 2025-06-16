@@ -24,7 +24,7 @@ export default function SignOut() {
     <div className="min-h-screen bg-black flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full">
         <div className="bg-gray-900 rounded-lg border border-gray-800 p-8 text-center">
-          <div className="mx-auto h-12 w-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
+          <div className="mx-auto h-12 w-12 bg-orange-600 rounded-full flex items-center justify-center mb-4">
             <LogOut className="h-6 w-6 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-4">Déconnexion</h2>

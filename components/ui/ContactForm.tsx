@@ -126,7 +126,7 @@ export default function ContactForm({ onSubmit, className }: ContactFormProps) {
               Type d'événement *
             </label>
             <select
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               {...register('eventType')}
             >
               <option value="">Sélectionner un type</option>

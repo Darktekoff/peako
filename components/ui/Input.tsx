@@ -12,9 +12,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const [isFocused, setIsFocused] = useState(false)
     
     const inputClasses = clsx(
-      'w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent',
+      'w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent',
       error 
-        ? 'border-red-500 focus:ring-red-500' 
+        ? 'border-red-500 focus:ring-orange-500' 
         : 'border-gray-700 hover:border-gray-600',
       className
     )

@@ -153,7 +153,7 @@ export default function TrackCard({
             onClick={handlePlayClick}
             className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity group"
           >
-            <div className="w-16 h-16 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-colors">
+            <div className="w-16 h-16 bg-orange-600 hover:bg-orange-700 rounded-full flex items-center justify-center transition-colors">
               {isPlaying ? (
                 <Pause size={24} className="text-white" />
               ) : (

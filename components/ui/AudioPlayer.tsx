@@ -111,7 +111,7 @@ export default function AudioPlayer({ track, compact = false, className }: Audio
         <button
           onClick={togglePlay}
           disabled={isLoading}
-          className="flex items-center justify-center w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full transition-colors disabled:opacity-50"
+          className="flex items-center justify-center w-10 h-10 bg-orange-600 hover:bg-orange-700 rounded-full transition-colors disabled:opacity-50"
         >
           {isLoading ? (
             <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -161,7 +161,7 @@ export default function AudioPlayer({ track, compact = false, className }: Audio
           <button
             onClick={togglePlay}
             disabled={isLoading}
-            className="flex items-center justify-center w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full transition-colors disabled:opacity-50"
+            className="flex items-center justify-center w-12 h-12 bg-orange-600 hover:bg-orange-700 rounded-full transition-colors disabled:opacity-50"
           >
             {isLoading ? (
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

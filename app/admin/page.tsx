@@ -105,7 +105,7 @@ export default function AdminDashboard() {
       value: stats.messagesCount,
       icon: MessageSquare,
       href: '/admin/messages',
-      color: 'bg-red-500',
+      color: 'bg-orange-500',
       bgColor: 'bg-red-50',
       textColor: 'text-red-700'
     }
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
       </div>
     )
   }
@@ -189,8 +189,8 @@ export default function AdminDashboard() {
                 className="flex items-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow group"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                    <action.icon className="h-5 w-5 text-red-600" />
+                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+                    <action.icon className="h-5 w-5 text-orange-600" />
                   </div>
                 </div>
                 <div className="ml-4 flex-1">
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <Plus className="h-5 w-5 text-gray-400 group-hover:text-red-600 transition-colors" />
+                  <Plus className="h-5 w-5 text-gray-400 group-hover:text-orange-600 transition-colors" />
                 </div>
               </Link>
             ))}
@@ -215,7 +215,7 @@ export default function AdminDashboard() {
             <h2 className="text-lg font-medium text-gray-900">Messages récents</h2>
             <Link
               href="/admin/messages"
-              className="text-sm text-red-600 hover:text-red-700 font-medium"
+              className="text-sm text-orange-600 hover:text-red-700 font-medium"
             >
               Voir tous
             </Link>
@@ -252,7 +252,7 @@ export default function AdminDashboard() {
                       <div className="flex-shrink-0 text-right">
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           message.status === 'NEW' 
-                            ? 'bg-red-100 text-red-800'
+                            ? 'bg-orange-100 text-red-800'
                             : 'bg-gray-100 text-gray-800'
                         }`}>
                           {message.status === 'NEW' ? 'Nouveau' : 'Lu'}

@@ -16,7 +16,7 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       success: 'bg-green-900/50 text-green-400 border border-green-800',
       warning: 'bg-yellow-900/50 text-yellow-400 border border-yellow-800',
       error: 'bg-red-900/50 text-red-400 border border-red-800',
-      genre: 'bg-gradient-to-r from-red-600/20 to-red-500/20 text-red-400 border border-red-600/30'
+      genre: 'bg-gradient-to-r from-red-600/20 to-red-500/20 text-red-400 border border-orange-600/30'
     }
     
     const sizes = {

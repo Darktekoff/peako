@@ -12,18 +12,18 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         primary: {
-          DEFAULT: '#DC2626', // Rouge vif
-          50: '#FEF2F2',
-          100: '#FEE2E2',
-          200: '#FECACA',
-          300: '#FCA5A5',
-          400: '#F87171',
-          500: '#EF4444',
-          600: '#DC2626',
-          700: '#B91C1C',
-          800: '#991B1B',
-          900: '#7F1D1D',
-          950: '#450A0A',
+          DEFAULT: '#FE9000', // Orange principal du logo
+          50: '#FFF7ED',
+          100: '#FFEDD5',
+          200: '#FED7AA',
+          300: '#FDBA74',
+          400: '#FB923C',
+          500: '#FE9000',
+          600: '#FE8800',
+          700: '#EA580C',
+          800: '#C2410C',
+          900: '#9A3412',
+          950: '#431407',
         },
         dark: {
           DEFAULT: '#0A0A0A',
@@ -48,9 +48,9 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #FE9000 0%, #EA580C 100%)',
         'gradient-dark': 'linear-gradient(135deg, #171717 0%, #000000 100%)',
-        'gradient-accent': 'linear-gradient(135deg, #DC2626 0%, #FBBF24 100%)',
+        'gradient-accent': 'linear-gradient(135deg, #FE9000 0%, #FBBF24 100%)',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -62,8 +62,8 @@ const config: Config = {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 5px rgb(220 38 38 / 0.5), 0 0 20px rgb(220 38 38 / 0.3)' },
-          '100%': { boxShadow: '0 0 20px rgb(220 38 38 / 0.5), 0 0 40px rgb(220 38 38 / 0.3)' },
+          '0%': { boxShadow: '0 0 5px rgb(254 144 0 / 0.5), 0 0 20px rgb(254 144 0 / 0.3)' },
+          '100%': { boxShadow: '0 0 20px rgb(254 144 0 / 0.5), 0 0 40px rgb(254 144 0 / 0.3)' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },

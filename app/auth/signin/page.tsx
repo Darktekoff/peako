@@ -50,7 +50,7 @@ export default function SignIn() {
         <div className="bg-gray-900 rounded-lg border border-gray-800 p-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="mx-auto h-12 w-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto h-12 w-12 bg-orange-600 rounded-full flex items-center justify-center mb-4">
               <Lock className="h-6 w-6 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white">Administration</h2>
@@ -59,7 +59,7 @@ export default function SignIn() {
 
           {/* Error Message */}
           {error && (
-            <div className="mb-6 p-4 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center gap-3">
+            <div className="mb-6 p-4 rounded-lg bg-orange-500/10 border border-red-500/20 flex items-center gap-3">
               <AlertCircle className="h-5 w-5 text-red-400 flex-shrink-0" />
               <p className="text-red-400 text-sm">{error}</p>
             </div>
@@ -83,7 +83,7 @@ export default function SignIn() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   placeholder="admin@peako-music.com"
                 />
               </div>
@@ -105,7 +105,7 @@ export default function SignIn() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   placeholder="••••••••"
                 />
               </div>
@@ -114,7 +114,7 @@ export default function SignIn() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? (
                 <div className="flex items-center">

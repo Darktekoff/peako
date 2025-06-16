@@ -1,8 +1,8 @@
-// Re-export des types Prisma
-export type {
-  User,
+// Import et re-export des types Prisma
+import type {
+  User as PrismaUser,
   Post,
-  Event,
+  Event as PrismaEvent,
   Track,
   Gallery,
   ContactMessage,
@@ -13,6 +13,22 @@ export type {
   ContactType,
   MessageStatus,
 } from '@prisma/client'
+
+// Re-export avec alias si nécessaire
+export type User = PrismaUser
+export type Event = PrismaEvent
+export type {
+  Post,
+  Track,
+  Gallery,
+  ContactMessage,
+  Photo,
+  Role,
+  EventStatus,
+  ReleaseType,
+  ContactType,
+  MessageStatus,
+}
 
 // Types utilitaires
 export type SafeUser = Omit<User, 'password'>

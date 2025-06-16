@@ -82,10 +82,10 @@ export default async function RootLayout({
   return (
     <html lang="fr" className="scrollbar-custom" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/images/Design sans titre (9).png" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/Design sans titre (9).png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#DC2626" />
+        <meta name="theme-color" content="#FE9000" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
         <Providers session={session}>

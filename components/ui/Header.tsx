@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { useSession } from 'next-auth/react'
+import { Menu, X, LogIn, User } from 'lucide-react'
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -17,6 +18,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { data: session } = useSession()
+  const isAdminPage = pathname.startsWith('/admin')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +34,9 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+          isAdminPage
+            ? 'bg-black/95 backdrop-blur-md shadow-lg'
+            : isScrolled
             ? 'bg-black/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
         }`}
@@ -40,12 +45,11 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="relative group">
-              <h1 className="text-2xl md:text-3xl font-bold">
-                <span className="text-red-500">Peak'</span>
-                <span className={`transition-colors duration-300 ${
-                  isScrolled ? "text-white" : "text-white"
-                }`}>O</span>
-              </h1>
+              <img 
+                src="/images/Sans titre (1024 x 800 px) (840 x 140 px).png" 
+                alt="Peak'O Music"
+                className="h-10 md:h-12 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -56,13 +60,13 @@ export default function Header() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className={`relative font-medium transition-colors duration-300 hover:text-red-400 ${
-                        isActive ? 'text-red-400' : isScrolled ? 'text-white' : 'text-white'
+                      className={`relative font-medium transition-colors duration-300 hover:text-orange-400 ${
+                        isActive ? 'text-orange-400' : isScrolled ? 'text-white' : 'text-white'
                       }`}
                     >
                       {item.name}
                       {isActive && (
-                        <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-red-500" />
+                        <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-orange-500" />
                       )}
                     </Link>
                   </li>
@@ -70,11 +74,28 @@ export default function Header() {
               })}
             </ul>
 
-            {/* CTA Button Desktop */}
-            <div className="hidden lg:block">
+            {/* CTA Buttons Desktop */}
+            <div className="hidden lg:flex items-center gap-4">
+              {session ? (
+                <Link 
+                  href="/admin" 
+                  className="inline-flex items-center justify-center px-4 py-2 text-base font-medium border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg transition-colors"
+                >
+                  <User size={18} className="mr-2" />
+                  Admin
+                </Link>
+              ) : (
+                <Link 
+                  href="/auth/signin" 
+                  className="inline-flex items-center justify-center px-4 py-2 text-base font-medium border-2 border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg transition-colors"
+                >
+                  <LogIn size={18} className="mr-2" />
+                  Connexion
+                </Link>
+              )}
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-4 py-2 text-base font-medium bg-red-600 text-white hover:bg-red-700 rounded-lg transition-colors"
+                className="inline-flex items-center justify-center px-4 py-2 text-base font-medium bg-orange-600 text-white hover:bg-orange-700 rounded-lg transition-colors"
               >
                 Booking
               </Link>
@@ -120,7 +141,7 @@ export default function Header() {
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                             isActive 
-                              ? 'bg-red-600 text-white' 
+                              ? 'bg-orange-600 text-white' 
                               : 'text-gray-300 hover:text-white hover:bg-gray-800'
                           }`}
                         >
@@ -130,11 +151,30 @@ export default function Header() {
                     )
                   })}
                 </ul>
-                <div className="mt-8">
+                <div className="mt-8 space-y-3">
+                  {session ? (
+                    <Link
+                      href="/admin"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block w-full px-4 py-3 text-center font-medium border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg transition-colors"
+                    >
+                      <User size={18} className="inline mr-2" />
+                      Admin
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/auth/signin"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block w-full px-4 py-3 text-center font-medium border-2 border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg transition-colors"
+                    >
+                      <LogIn size={18} className="inline mr-2" />
+                      Connexion
+                    </Link>
+                  )}
                   <Link
                     href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block w-full px-4 py-3 text-center font-medium bg-red-600 text-white hover:bg-red-700 rounded-lg transition-colors"
+                    className="block w-full px-4 py-3 text-center font-medium bg-orange-600 text-white hover:bg-orange-700 rounded-lg transition-colors"
                   >
                     Demande de booking
                   </Link>

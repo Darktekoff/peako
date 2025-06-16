@@ -20,11 +20,11 @@
 @layer components {
   /* Boutons */
   .btn {
-    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
   }
 
   .btn-primary {
-    @apply btn bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-700 hover:to-red-600 active:scale-95 shadow-lg hover:shadow-red-500/25;
+    @apply btn bg-gradient-to-r from-orange-600 to-orange-500 text-white hover:from-orange-700 hover:to-orange-600 active:scale-95 shadow-lg hover:shadow-orange-500/25;
   }
 
   .btn-secondary {
@@ -32,7 +32,7 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-red-500 bg-transparent text-red-500 hover:bg-red-500 hover:text-white;
+    @apply btn border-2 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white;
   }
 
   .btn-ghost {
@@ -41,11 +41,11 @@
 
   /* Liens animés */
   .link-hover {
-    @apply relative inline-block transition-colors hover:text-red-500;
+    @apply relative inline-block transition-colors hover:text-orange-500;
   }
 
   .link-hover::after {
-    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-red-500 transition-all duration-300 content-[''];
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-orange-500 transition-all duration-300 content-[''];
   }
 
   .link-hover:hover::after {
@@ -59,7 +59,7 @@
 
   /* Titres */
   .title-gradient {
-    @apply bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent;
   }
 
   /* Cards */
@@ -68,7 +68,7 @@
   }
 
   .card-hover {
-    @apply card hover:shadow-lg hover:shadow-red-500/10 hover:-translate-y-1;
+    @apply card hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1;
   }
 
   /* Badges */
@@ -77,7 +77,7 @@
   }
 
   .badge-primary {
-    @apply badge bg-red-500/10 text-red-400 border border-red-600/30;
+    @apply badge bg-orange-500/10 text-orange-400 border border-orange-600/30;
   }
 
   .badge-accent {
@@ -128,7 +128,7 @@
 
   /* Glow effects */
   .glow-primary {
-    @apply drop-shadow-[0_0_20px_rgba(239,68,68,0.5)];
+    @apply drop-shadow-[0_0_20px_rgba(254,144,0,0.5)];
   }
 
   .glow-accent {
@@ -146,7 +146,7 @@
 
   /* Gradients */
   .bg-gradient-primary-to-dark {
-    @apply bg-gradient-to-br from-red-600 to-black;
+    @apply bg-gradient-to-br from-orange-600 to-black;
   }
 
   .bg-gradient-dark-to-transparent {
@@ -154,7 +154,7 @@
   }
 
   .bg-gradient-accent {
-    @apply bg-gradient-to-r from-red-500 via-red-400 to-red-600;
+    @apply bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600;
   }
 
   /* Grid patterns */
@@ -167,7 +167,7 @@
   /* Scrollbar */
   .scrollbar-custom {
     scrollbar-width: thin;
-    scrollbar-color: #dc2626 #000000;
+    scrollbar-color: #fe9000 #000000;
   }
 
   .scrollbar-custom::-webkit-scrollbar {
@@ -180,12 +180,12 @@
   }
 
   .scrollbar-custom::-webkit-scrollbar-thumb {
-    background: #dc2626;
+    background: #fe9000;
     border-radius: 4px;
   }
 
   .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    background: #ef4444;
+    background: #fe8800;
   }
 
   /* Audio Player Slider */
@@ -206,7 +206,7 @@
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: #dc2626;
+    background: #fe9000;
     cursor: pointer;
     border: 2px solid #000;
   }
@@ -222,7 +222,7 @@
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: #dc2626;
+    background: #fe9000;
     cursor: pointer;
     border: 2px solid #000;
   }
